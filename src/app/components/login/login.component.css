@@ -1,0 +1,51 @@
+.main-content-wrapper{
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    
+    background: rgb(252, 225, 225);
+}
+
+.form-wrapper{
+    padding: 50px;
+    border-radius: 2em;
+    background: white;
+
+    height: fit-content;
+    min-width: 30vw;
+}
+
+.form-elements{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-navigator{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error{
+    font-size: 0.5em;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.heading{
+    font-weight: normal;
+    font-size: 2em;
+
+    color: #8a151b;
+}
+
+.mat-raised-button{
+    background: #990109;
+}
+
+.account_number{
+    color: #ff001e;
+}

@@ -1,0 +1,25 @@
+
+<div class="main-content-wrapper">
+    <div class="form-wrapper" [formGroup]="loginForm">
+
+        <div id="user-name-input" class = "form-elements">
+            <p class = "heading">Login to your world of possibilities!</p>
+
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username" [(ngModel)]="inputData.username">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input type = "password" matInput formControlName="password" [(ngModel)]="inputData.password">
+            </mat-form-field>
+
+            <mat-error class="error">{{getFormErrorMessage()}}</mat-error>
+        </div>
+
+        <div class="form-navigator">
+            <button mat-raised-button color="primary" [disabled]="loginForm.invalid">Continue</button>
+        </div>
+    </div>
+</div>

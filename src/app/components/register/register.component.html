@@ -1,0 +1,103 @@
+
+<div class="main-content-wrapper">
+    <div class="form-wrapper" [formGroup]="registerForm">
+
+        <div id="name-input" class = "form-elements" *ngIf="formStep === 1">
+            <p class = "heading">How should we call you?</p>
+
+            <mat-form-field>
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName" [(ngModel)]="inputData.firstName">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Middle Name</mat-label>
+                <input matInput formControlName="middleName" [(ngModel)]="inputData.middleName">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastName" [(ngModel)]="inputData.lastName">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Mobile Number</mat-label>
+                <span matPrefix>+91 &nbsp;</span>
+                <input matInput formControlName="mobile_number" [(ngModel)]="inputData.mobile_number">
+            </mat-form-field>
+
+            <mat-error class="error">{{getFormErrorMessage()}}</mat-error>
+        </div>
+
+        <div id="user-name-input" class = "form-elements" *ngIf="formStep === 2">
+            <p class = "heading">Stay unique choose an username!</p>
+
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username" [(ngModel)]="inputData.username">
+            </mat-form-field>
+
+            <mat-error class="error">{{getFormErrorMessage()}}</mat-error>
+        </div>
+
+        <div id="password-input" class = "form-elements" *ngIf="formStep === 3">
+            <p class = "heading">We won't peep! Choose your password!</p>
+
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input type = "password" matInput formControlName="password" [(ngModel)]="inputData.password">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Confirm Password</mat-label>
+                <input type = "password" matInput formControlName = "confirm_password" [(ngModel)]="inputData.confirm_password">
+            </mat-form-field>
+
+            <mat-error class="error">{{getFormErrorMessage()}}</mat-error>
+        </div>
+
+        <div id="security-input" class = "form-elements" *ngIf="formStep === 4">
+            <p class = "heading">Incase you forget your password!</p>
+
+            <mat-form-field>
+                <mat-label>Choose a Security question</mat-label>
+                <mat-select value="0" formControlName="security_qn" [(ngModel)]="inputData.security_qn" required>
+                    <mat-option *ngFor="let question of security_questions" value = "{{question.id}}">{{question.question}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Answer to your security question</mat-label>
+                <input matInput formControlName="security_ans" [(ngModel)]="inputData.security_ans">
+            </mat-form-field>
+
+            <mat-error class="error">{{getFormErrorMessage()}}</mat-error>
+        </div>
+
+        <div id="final-page" class = "form-elements" *ngIf="formStep === 5">
+            <p class = "heading">That's it!! Yay!!</p>
+            <p class = "heading">Your account number is <span class = "account_number">{{inputData.account_number}}</span></p>
+        </div>
+
+        <div class="form-navigator">
+            <button mat-button color="primary" [disabled]="formStep === 1 || formStep === 5" (click)="formStepHandler(0)">Back</button>
+            <button mat-raised-button color="primary" [disabled]="formStep === 5" (click)="formStepHandler(1)">Continue</button>
+        </div>
+        
+        <div id="other-input" *ngIf="formStep === 1000">
+            <mat-form-field>
+                <mat-label>Fill form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Fill form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+[
+    {
+        "first_name": "Mohamed",
+        "middle_name": "Arshad",
+        "last_name": "M",
+        "username": "arshuoffl",
+        "password": "xdxdxd",
+        "security_qn_id": 0,
+        "security_answer": "Cat",
+        "account_number": "AR321",
+        "mobile_number": "8928392839"
+    },
+    {
+        "first_name": "Arshad",
+        "middle_name": "Mohamed",
+        "last_name": "M",
+        "username": "arshuuuu",
+        "password": "xdxdxd",
+        "security_qn_id": 0,
+        "security_answer": "Dog",
+        "account_number": "AR123",
+        "mobile_number": "8928392839"
+    }
+]

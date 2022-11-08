@@ -1,0 +1,78 @@
+
+<div class="main-content-wrapper">
+
+    <div class="box-wrapper" *ngIf="!loggedIn">
+        <div class="left-content main">
+            <img class = "left-img" src="/assets/events/events_1.jpg" alt="People interacting">
+        </div>
+
+        <div class="right-content">
+            <p class="heading">Make an impact in this world!</p>
+
+            <p class="sub-heading">Register for events now!</p>
+
+            <div class="inner-wrapper">
+                <div class="link-wrapper">
+                    <asl-google-signin-button (click)="signInWithGoogle()" type = "standard" size="large"></asl-google-signin-button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "sub-wrapper" *ngIf="loggedIn">
+
+        <div class="tab-wrapper">
+            <button mat-button class = "{{selectedTab === 1? 'selected' : ''}} event-btn" (click)="switchTab(1)">All events</button>
+            <button mat-button class = "{{selectedTab === 2? 'selected' : ''}} event-btn" (click)="switchTab(2)">My Events</button> 
+        </div>
+                 
+        <div class="box-wrapper" *ngIf="selectedTab === 1">
+            <div class="left-content">
+                <button mat-button class = "selected event-btn">All Events</button>
+                <button mat-button class = "event-btn {{event === selectedEvent? 'selected' : ''}}" *ngFor="let event of events" (click)="toggleEvent(event)">{{event.name}}</button>
+            </div>
+    
+            <div class="right-content"  *ngIf="selectedEvent !== undefined">
+                <div class="profile-menu-wrapper" (click)="signOut()">
+                    <div class="profile-wrapper">
+                        <img id = "profile-pic" src="{{user.photoUrl}}" referrerpolicy="no-referrer">
+                        <p class="sub-para">Logged in as {{user.name}}</p>
+                    </div>
+                </div>
+
+                <p class="heading">{{selectedEvent.name}}</p>
+                <p class="sub-para">{{selectedEvent.description}}</p>
+                
+                <div class="reg-wrapper">
+                    <button mat-button *ngIf="!checkAlreadyRegistered(selectedEvent)" class = "selected" (click)="registerFor(selectedEvent)">Register for this event</button>
+                    <button mat-button *ngIf="checkAlreadyRegistered(selectedEvent)" class = "selected" (click)="unregister(selectedEvent)">Un-register</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-wrapper" *ngIf="selectedTab === 2">
+            <div class="left-content">
+                <button mat-button class = "selected event-btn">My Events</button>
+                <button mat-button class = "event-btn {{event === selectedEvent? 'selected' : ''}}" *ngFor="let event of registeredEvents" (click)="toggleEvent(event)">{{event.name}}</button>
+            </div>
+    
+            <div class="right-content" *ngIf="selectedEvent !== undefined">
+                <div class="profile-menu-wrapper" (click)="signOut()">
+                    <div class="profile-wrapper">
+                        <img id = "profile-pic" src="{{user.photoUrl}}" referrerpolicy="no-referrer">
+                        <p class="sub-para">Logged in as {{user.name}}</p>
+                    </div>
+                </div>
+
+                <p class="heading">{{selectedEvent.name}}</p>
+                <p class="sub-para">{{selectedEvent.description}}</p>
+                
+                <div class="reg-wrapper">
+                    <button mat-button class = "selected" (click)="unregister(selectedEvent); selectedEvent = undefined">Un-register</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- <asl-facebook-signin-button><img src="/assets/meta.png" alt="Meta / Facebook"></asl-facebook-signin-button> -->
+</div>

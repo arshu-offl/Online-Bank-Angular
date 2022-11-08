@@ -1,0 +1,19 @@
+[
+    {
+        "id": 0,
+        "name": "Clean the beaches",
+        "description": "Join us in a meticulous journey of cleaning the beaches and saving the environment"
+    },
+
+    {
+        "id": 1,
+        "name": "Orientation on Frauds",
+        "description": "Join us to get enlightened about the frauds that happen in everyday life and how to prevent them."
+    },
+
+    {
+        "id": 2,
+        "name": "Meet our leaders",
+        "description": "Join us in a fun session on banking essentials with our leaders."
+    }
+]
