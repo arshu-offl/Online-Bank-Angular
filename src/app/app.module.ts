@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ChequebookRequestComponent } from './chequebook-request/chequebook-request.component';
 import { HttpClientModule} from '@angular/common/http';
 
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { ChangeAtmpinComponent } from './change-atmpin/change-atmpin.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChequebookRequestComponent
+    ChequebookRequestComponent,
+    ChangeAtmpinComponent
   ],
   imports: [
     BrowserModule,

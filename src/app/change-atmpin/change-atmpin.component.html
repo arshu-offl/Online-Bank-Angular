@@ -1,0 +1,100 @@
+
+<!-- <div classname ="form">
+    <form>
+
+        <div>
+            <div classname="input-container">
+                <label ><b>Account Number</b></label>
+            <input  type="text" placeholder="Enter Account Number" name="AccNo" required>
+            
+            </div>
+            
+            <div classname ="input-container">
+            <label><b>Number of Pages</b></label>
+            <input type="text" placeholder="Enter number of pages" name="psw" required>
+            </div>
+        </div>
+           
+        <div classname="button-container">
+            <button type="submit" (click)="request()">Request</button>
+            
+        </div>
+           
+        
+        </form>
+</div> -->
+
+
+<div class="app">
+    <h1>CHANGE ATM PIN</h1>
+    <div class="login-form">
+
+        <div class="form">
+            <form #requestForm="ngForm" (submit)="onSubmit()" (ngSubmit)="updatePin(requestForm)" >
+                <!-- (ngSubmit)="addNewRequest(requestForm)" -->
+              <div class="input-container">
+                <label>Account Number</label>
+                <input type="text" required name="accNo" [(ngModel)]="accNo"/>
+               
+              </div>
+              <div class="input-container">
+                <label>Old PIN</label>
+                <input type="number" required name="oldPin" [(ngModel)]="oldPin" />
+               
+              </div>
+              <div class="input-container">
+                <label>New PIN</label>
+                <input type="number" required name="newPin" [(ngModel)]="newPin" />
+               
+              </div>
+              <div class="input-container">
+                <label>Confirm PIN</label>
+                <input type="number" name="confirmPin" required [(ngModel)]="confirmPin" />
+                
+              </div>
+              <!-- <select class="form-control" required>
+                <option *ngFor="let p of pagesOptions" [value]="p.value">
+                  {{ p.name }}
+                </option>
+              </select> -->
+              <div class="button-container">
+                <button type="submit" >Request</button>
+             </div>
+            </form>
+            <!-- <input type="text" required name="msg" [(ngModel)]="msg" /> -->
+            
+          </div>
+    </div>
+</div>
+
+
+<!-- <h4>List of Contacts</h4>
+
+<ul>
+    <li *ngFor="let acc of accList">
+        {{acc.Pages}}
+    </li>
+</ul> -->
+
+<!-- <div ngIf="msgTrue">Contact created successfully</div> -->
+
+
+<!-- <div className="form">
+    <form >
+      <div className="input-container">
+        <label>Username </label>
+        <input type="text" name="uname" required />
+       
+      </div>
+      <div className="input-container">
+        <label>Password </label>
+        <input type="password" name="pass" required />
+        
+      </div>
+      <div className="button-container">
+        <input type="submit" />
+      </div>
+    </form>
+  </div> -->
+
+

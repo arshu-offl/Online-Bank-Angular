@@ -12,8 +12,8 @@ export class ChequebookRequestService {
   {
 
     //headers
-    // const httpHeaders = new HttpHeaders();
-    // httpHeaders.append('content-type' , 'application/json');
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type' , 'application/json');
     return this.httpClient.get('http://localhost:3000/ChequebookRequest');
 
   }
