@@ -1,0 +1,16 @@
+{
+    "accountTypes": [
+        {
+            "accTypeId": 1,
+            "accType": "Savings"
+        },
+        {
+            "accTypeId": 2,
+            "accType": "Salary"
+        },
+        {
+            "accTypeId": 3,
+            "accType": "Current "
+        }
+    ]
+}

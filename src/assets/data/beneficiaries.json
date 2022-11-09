@@ -1,0 +1,28 @@
+{
+    "allBeneficiaries": [
+        {
+            "sourceAccount": "1111111",
+            "beneficiaryName": "Raman Kumar",
+            "beneficiaryAccount": "123453345S",
+            "beneficiaryIfscCode": "SBN123400"
+        },
+        {
+            "sourceAccount": "2222222",
+            "beneficiaryName": "Pavan Mishra",
+            "beneficiaryAccount": "9997835678",
+            "beneficiaryIfscCode": "SBN896780"
+        },
+        {
+            "sourceAccount": "2222222",
+            "beneficiaryName": "Rohit Sharma",
+            "beneficiaryAccount": "77764568999",
+            "beneficiaryIfscCode": "SBN101984"
+        },
+        {
+            "sourceAccount": "1111111",
+            "beneficiaryName": "Ashok Sans",
+            "beneficiaryAccount": "3864393490",
+            "beneficiaryIfscCode": "SBN978790"
+        }
+    ]
+}

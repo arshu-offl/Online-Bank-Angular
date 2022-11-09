@@ -1,0 +1,24 @@
+{
+    "navItems": [
+        {
+            "itemId": "1",
+            "itemText": "Check Balance"
+        },
+        {
+            "itemId": "2",
+            "itemText": "Fund Transfer"
+        },
+        {
+            "itemId": "3",
+            "itemText": "Open New FD"
+        },
+        {
+            "itemId": "4",
+            "itemText": "Events"
+        },
+        {
+            "itemId": "5",
+            "itemText": "Log Out"
+        }
+    ]
+}

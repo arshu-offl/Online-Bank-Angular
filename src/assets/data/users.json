@@ -1,0 +1,30 @@
+{
+    "users": [
+        {
+            "accountNumber": "1111111",
+            "name": "Aakash",
+            "middleName": "",
+            "lastName": "Kumar",
+            "username": "aakash",
+            "password": "1234",
+            "securityQuestions": "",
+            "securityAnswers": "",
+            "accTypeId": 1,
+            "mobileNumber": "",
+            "balance": 15000
+        },
+        {
+            "accountNumber": "2222222",
+            "name": "Bhargav",
+            "middleName": "",
+            "lastName": "Roy",
+            "username": "bhargav",
+            "password": "123456",
+            "securityQuestions": "",
+            "securityAnswers": "",
+            "accTypeId": 1,
+            "mobileNumber": "",
+            "balance": 20000
+        }
+    ]
+}
