@@ -1,0 +1,98 @@
+<p class="h4">Fund Transfer</p>
+<form class="form-group" [formGroup]="fundTransferForm">
+    <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <label class="col-sm-2 col-form-label">From Account</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" formControlName="sourceAccount" readonly>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <label class="col-sm-2 col-form-label">Beneficiary</label>
+        <div class="col-sm-6">
+            <select class="form-select" formControlName="beneficiaryName" (change)="chnageBeneficiary($event)">
+                <option value="" disabled>Select beneficiary</option>
+                <option *ngFor="let beneficiary of userBeneficiaries" [ngValue]="beneficiary.beneficiaryAccount">
+                    {{beneficiary.beneficiaryName}}
+                </option>
+            </select>
+        </div>
+        <div class="col-sm-2">
+            <span *ngIf="submitted && f['beneficiaryName'].errors['required']" class="text-danger">
+                *Required Field
+            </span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <label class="col-sm-2 col-form-label">Beneficiary Account</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" formControlName="beneficiaryAccount" readonly>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <label class="col-sm-2 col-form-label">Beneficiary IFSC Code</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" formControlName="beneficiaryIfsc" readonly>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <label class="col-sm-2 col-form-label">Beneficiary Account Type</label>
+        <div class="col-sm-6">
+            <select class="form-select" formControlName="beneficiaryAccountType" (change)="changeAccountType($event)">
+                <option value="" disabled>Select Account Type</option>
+                <option *ngFor="let accountType of accountTypes" [ngValue]="accountType.accTypeId">
+                    {{accountType.accType}}
+                </option>
+            </select>
+        </div>
+        <div class="col-sm-2">
+            <span *ngIf="submitted && f['beneficiaryAccountType'].errors['required']" class="text-danger">
+                *Required Field
+            </span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <label class="col-sm-2 col-form-label">Amount</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" formControlName="amount">
+        </div>
+        <div class="col-sm-2">
+            <span *ngIf="submitted && f['amount'].errors['required']" class="text-danger">
+                *Required Field
+            </span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <label class="col-sm-2 col-form-label">Remarks</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" formControlName="remarks">
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="form-group form-check row">
+        <div class="col-sm-12 text-center">
+            <input type="checkbox" formControlName="acceptTerms">I have read and accepted the terms
+            and conditions
+            <span *ngIf="submitted && f['acceptTerms'].errors['required']" class="text-danger"
+                style="padding-left: 20px;">
+                *Required Field
+            </span>
+        </div>
+    </div>
+    <div class="form group row">
+        <div class="col-sm-12 text-center">
+            <button type="submit" class="btn btn-primary" (click)="transferFunds()"
+                [disabled]="!fundTransferForm.valid">Transfer</button>
+        </div>
+    </div>
+</form>

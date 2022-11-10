@@ -1,0 +1,28 @@
+{
+ "UserInfo" : [
+    {
+    "account": 1,
+    "availableAmt" : 200000
+
+    },
+    {
+      "account" : 2,
+      "availableAmt" : 500000
+
+    },
+    {
+      "account" : 3,
+      "availableAmt" : 7500000
+    },
+    {
+      "account" : 4,
+      "availableAmt" : 300000
+
+    },
+    {
+      "account" : 5,
+      "availableAmt" : 400000
+
+    }
+  ]
+}

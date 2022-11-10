@@ -1,0 +1,56 @@
+*{
+  box-sizing: border-box;
+}
+
+.heading{
+font-size: 30px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15%;
+  background-color: bisque;
+}
+
+.btn btn-form{
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.accnt{
+  padding: 15px;
+  margin-left: 20px;
+}
+
+.prod{
+  margin-left: 35px;
+}
+
+.Amount{
+  margin-left: 0px;
+  margin-right: 20px;
+
+
+}
+
+.period{
+  margin-left: 40px;
+  margin-right: 40px;
+
+}
+
+.amt{
+  margin-left: 40px;
+  margin-right: 50px;
+}
+
+.register{
+  margin-left: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+  background-color: blue;
+  color: white;
+}

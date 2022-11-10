@@ -12,11 +12,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { EventsComponent } from './components/events/events.component';
 import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import { GoogleLoginProvider, FacebookLoginProvider } from '@abacritt/angularx-social-login';
+import { OpenFDComponent } from './components/open-fd/open-fd.component';
+import { FundTransferComponent } from './components/fund-transfer/fund-transfer.component';
+import { ToastrModule } from 'ngx-toastr';
 
 const routes: Routes = [
+  { path: 'fundTransfer', component: FundTransferComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'events', component: EventsComponent },
+  { path : 'openfd', component : OpenFDComponent },
+  { path: '', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -24,7 +30,9 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    EventsComponent
+    EventsComponent,
+    OpenFDComponent,
+    FundTransferComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -34,7 +42,8 @@ const routes: Routes = [
     MaterialModule,
     MatInputModule,
     HttpClientModule,
-    SocialLoginModule
+    SocialLoginModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     {

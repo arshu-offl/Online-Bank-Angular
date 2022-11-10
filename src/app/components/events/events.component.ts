@@ -69,7 +69,7 @@ export class EventsComponent implements OnInit {
   }
 
   checkAlreadyRegistered(event: Event | undefined){
-    if(event === undefined) return ;
+    if(event === undefined) return undefined;
 
     return this.registeredEvents.findIndex((e) => e === event) !== -1;
   }

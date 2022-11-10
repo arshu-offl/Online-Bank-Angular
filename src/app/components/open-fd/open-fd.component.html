@@ -1,0 +1,37 @@
+<h2 >{{ title }}</h2>
+<div class="container">
+
+
+  <form class="btn btn-form" [formGroup]="FDform" (ngSubmit)="postData()">
+    <label for="btn btn-acc" class="accnt">From Account:   </label>
+    <input type="text" id="btn btn-acc" name="accnt" formControlName="accntfield"><br><br>
+    <label for="btn btn-prod" class="prod">FD Product:   </label>
+    <select  class="FD prod" name="prod" id="btn btn-prod" placeholder="Select FD Product">
+      <option value="Cash">Cash</option>
+      <option value="gold">Gold</option>
+      <option value="Diamonds">Diamonds</option>
+    </select><br><br>
+    <label for="btn btn-period" class="period">FD Period:   </label>
+    <select class="FD prd" id="btn btn-prod" name="period">
+      <option value="3months">3 Months</option>
+      <option value="6months">6 Months</option>
+      <option value="9months">9 Months</option>
+      <option value="12months">12 months</option>
+  </select><br><br>
+  <!-- <button type="button" class="availamt" (click)="showAmt()">availableamt</button>
+  <br><br> -->
+  <label for="btn btn-amt" class="amt">FD_amount:</label>
+
+  <input type="text" id="btn btn-amt" class="Amount" name="amount" formControlName="amtfield">
+  <br><br>
+
+
+  <input type="checkbox" id="chckbx" name="terms"  formControlName="termsfield">
+  <label for="chckbx" class="terms">I have read and accepted the terms and conditions</label><br><br>
+  <button type="submit" class="register">Register</button>
+
+  <p *ngIf="outputQuery !== undefined" class="output">Your balance = {{outputQuery}}</p>
+
+
+  </form>
+  </div>
