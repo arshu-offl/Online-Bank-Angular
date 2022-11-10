@@ -24,4 +24,14 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should require the required fields', () => {
+
+    component.loginForm.setValue({
+      username: '',
+      password: ''
+    })
+
+    expect(component.loginForm.valid).toEqual(false);
+  })
 });
