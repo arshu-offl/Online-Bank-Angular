@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -15,6 +15,8 @@ import { GoogleLoginProvider, FacebookLoginProvider } from '@abacritt/angularx-s
 import { OpenFDComponent } from './components/open-fd/open-fd.component';
 import { FundTransferComponent } from './components/fund-transfer/fund-transfer.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ChequebookRequestComponent } from './chequebook-request/chequebook-request.component';
+import { ChangeAtmpinComponent } from './change-atmpin/change-atmpin.component';
 
 const routes: Routes = [
   { path: 'fundTransfer', component: FundTransferComponent },
@@ -33,6 +35,8 @@ const routes: Routes = [
     EventsComponent,
     OpenFDComponent,
     FundTransferComponent,
+    ChequebookRequestComponent,
+    ChangeAtmpinComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -43,7 +47,8 @@ const routes: Routes = [
     MatInputModule,
     HttpClientModule,
     SocialLoginModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FormsModule
   ],
   providers: [
     {
@@ -67,6 +72,7 @@ const routes: Routes = [
         }
       } as SocialAuthServiceConfig,
     }
+    
   ],
   bootstrap: [AppComponent]
 })

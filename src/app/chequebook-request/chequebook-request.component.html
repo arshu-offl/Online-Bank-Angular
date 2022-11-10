@@ -1,0 +1,38 @@
+<div class="app">
+    <h1>Checkbook Request</h1>
+    <div class="login-form">
+
+        <div class="form">
+            <form #requestForm="ngForm" (submit)="onSubmit()" (ngSubmit)="addNewRequest(requestForm)" >
+                <!-- (ngSubmit)="addNewRequest(requestForm)" -->
+              <div class="input-container">
+                <label>Account Number </label>
+                <input type="text" required name="accNo" [(ngModel)]="accNo"/>
+               
+              </div>
+              <div class="input-container">
+                <label>Pages </label>
+                <!-- <input type="number" name="pages" required [(ngModel)]="pages" /> -->
+                <select class="form-control" name="pages" required [(ngModel)]="pages">
+                    <option *ngFor="let p of pagesOptions" [value]="p.value">
+                      {{ p.name }}
+                    </option>
+                  </select>
+              </div>
+              <!-- <select class="form-control" required>
+                <option *ngFor="let p of pagesOptions" [value]="p.value">
+                  {{ p.name }}
+                </option>
+              </select> -->
+              <div class="button-container">
+                <button type="submit" >Request</button>
+             </div>
+            </form>
+            
+          </div>
+    </div>
+</div>
+
+
+
+
