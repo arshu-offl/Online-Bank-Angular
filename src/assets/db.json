@@ -1,31 +1,26 @@
 {
- "UserInfo" : [
+  "UserInfo": [
     {
-    "account": 1,
-    "availableAmt" : 200000
-
+      "account": 1,
+      "availableAmt": 200000
     },
     {
-      "account" : 2,
-      "availableAmt" : 500000
-
+      "account": 2,
+      "availableAmt": 500000
     },
     {
-      "account" : 3,
-      "availableAmt" : 7500000
+      "account": 3,
+      "availableAmt": 7500000
     },
     {
-      "account" : 4,
-      "availableAmt" : 300000
-
+      "account": 4,
+      "availableAmt": 300000
     },
     {
-      "account" : 5,
-      "availableAmt" : 400000
-
+      "account": 5,
+      "availableAmt": 400000
     }
   ],
-  
   "Accounts": [
     {
       "id": 1,
@@ -35,7 +30,7 @@
     {
       "id": 2,
       "AccNo": "1234567899",
-      "Pin": "1234"
+      "Pin": 1122
     },
     {
       "id": 3,
@@ -58,6 +53,21 @@
       "AccNo": "1234567899",
       "Pages": "50",
       "id": 1
+    },
+    {
+      "AccNo": "1",
+      "Pages": "50",
+      "id": 2
+    },
+    {
+      "AccNo": "1",
+      "Pages": "50",
+      "id": 3
+    },
+    {
+      "AccNo": "1",
+      "Pages": "50",
+      "id": 4
     }
   ]
 }

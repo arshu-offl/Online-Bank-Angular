@@ -17,6 +17,9 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
     this.items = [
+      { "itemId": -2, "itemText": "Check Balance", "link": "checkBalance" },
+      { "itemId": -1, "itemText": "Change ATM Pin", "link": "changeAtmPin" },
+      { "itemId": 0, "itemText": "Request ChequeBook", "link": "chequeBook" },
       { "itemId": 1, "itemText": "Fund Transfer", "link": "fundTransfer" },
       { "itemId": 2, "itemText": "Open New FD", "link": "openfd" },
       { "itemId": 3, "itemText": "Events", "link": "events" },

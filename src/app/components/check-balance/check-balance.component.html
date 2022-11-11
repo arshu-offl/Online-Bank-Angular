@@ -1,1 +1,64 @@
-<p>check-balance works!</p>
+<div class="container mt-5">
+  
+    <h2>Angular Display Data from Json File Example</h2>
+    
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <label for="name">Name: </label>
+      <input id = "name" formControlName="name"  type="text" >
+      <button type="submit" >Submit</button>
+    </form>
+  
+    <!-- <div *ngIf="isActive===userForm.name">TRUEEEE</div> -->
+    <div class="row"> 
+      <div class="col-md-6"> {{displayFor}} </div> - 
+      <div class="col-md-6">  {{displayBalance}}  </div>
+    </div>
+  
+    <!-- <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+          </tr>
+      </thead>
+      <tbody>
+  
+        <tr *ngFor="let user of Users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          
+        </tr>
+  
+      </tbody>
+    </table> -->
+  
+  
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>AccountId</th>
+            <th>TransactionId</th>
+            <th>TransDate</th>
+            <th>TransType</th>
+            <th>Amount</th>
+          </tr>
+      </thead>
+      <tbody>
+  
+        <tr *ngFor="let user of arr">
+          <td>{{ user.accountid }}</td>
+          <td>{{ user.transactionid }}</td>
+          <td>{{ user.date }}</td>
+          <td>{{ user.transtype }}</td>
+          <td>{{ user.amount }}</td>
+          
+        </tr>
+  
+      </tbody>
+    </table>
+    
+  </div>
